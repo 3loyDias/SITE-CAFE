@@ -1,36 +1,38 @@
+/* Reseta as margens e o padding padrão, e define box-sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilos gerais para html e body */
 html, body {
     height: 100%;
-}
-
-body {
     font-family: 'Roboto', sans-serif;
     background-color: #f4f4f4;
+    color: #333;
     display: flex;
     flex-direction: column;
-    color: #333;
 }
 
+/* Wrapper para garantir o layout flexível */
 .wrapper {
     flex: 1;
     display: flex;
     flex-direction: column;
 }
 
+/* Estilos para o header */
 header {
-    font-family: 'Tilt Warp', bold;
-    background-color: #619778; /* Cor de fundo do header */
+    font-family: 'Tilt Warp', sans-serif;
+    background-color: #619778;
     color: #fff;
     padding: 1em 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Adiciona sombra ao header */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s;
 }
 
+/* Conteúdo do header com alinhamento flexível */
 .header-content {
     display: flex;
     justify-content: space-between;
@@ -40,56 +42,50 @@ header {
     padding: 0 20px;
 }
 
-.text-left {
-    font-size: 1.2em;
-}
-
-.site-title {
-    font-size: 27px; /* Tamanho da fonte */
-    font-family: 'Tilt Warp', bold; /* Família da fonte */
-    color: #ffffff; /* Cor do texto */
-    text-decoration: none; /* Remove o sublinhado do texto */
+/* Estilo para o título no header */
+.text-left .site-title {
+    font-family: 'Tilt Warp', sans-serif;
+    font-size: 27px;
+    color: #ffffff;
+    text-decoration: none;
     transition: color 0.3s;
 }
 
+/* Remover sublinhado dos links e aplicar estilo ao hover */
 .text-left a {
-    text-decoration: none; /* Remove o sublinhado do link */
-    color: inherit; /* Herda a cor do texto do pai */
+    text-decoration: none;
+    color: inherit;
 }
 
 .text-left a:hover {
-    color: #a1c4d7; /* Cor do texto no hover */
+    color: #a1c4d7;
 }
 
-.logo-right {
-    display: flex;
-    align-items: center;
-}
-
-header .logo {
-    max-width: 100px; /* Ajuste o tamanho do logotipo */
+/* Estilo para o logo */
+.logo-right .logo {
+    max-width: 100px;
     height: auto;
 }
 
+/* Estilos gerais para o main */
 main {
     flex: 1;
-    padding: 20px 20px 0 20px; /* Remova o padding inferior */
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Alinha ao topo */
     align-items: center;
+    justify-content: flex-start;
 }
 
+/* Logo grande com animação de fade-in */
 .large-logo {
-    max-width: 300px; /* Ajuste o tamanho do logotipo grande */
+    max-width: 300px;
     height: auto;
-    margin-bottom: 50px;
+    margin: 20px 0 50px 45px;
     animation: fadeIn 1s ease-in-out;
-    margin-left: 45px;
-    margin-top: 20px;
 }
 
-/* Animação para o logotipo grande */
+/* Animação de fade-in */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -101,59 +97,47 @@ main {
     }
 }
 
+/* Estilo para links de navegação */
 .link-row {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Ajuste o espaço entre os links aqui */
+    gap: 20px;
 }
 
 .nav-link {
-    font-size: 1.5em; /* Ajuste o tamanho da fonte dos links */
+    font-size: 1.5em;
     font-family: 'Oswald', sans-serif;
     color: #619778;
     text-decoration: none;
     padding: 15px 25px;
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
 
 .nav-link:hover {
     background-color: #619778;
-    color: #fff; /* Adiciona cor branca no hover */
-    transform: translateY(-3px); /* Efeito de elevação no hover */
+    color: #fff;
+    transform: translateY(-3px);
 }
 
-#content {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    width: 100%;
-    max-width: 1200px;
-    margin: 20px auto;
-}
-
+/* Estilo do footer */
 footer {
     background-color: #619778;
     color: #fff;
     text-align: center;
     padding: 1em 0;
-    box-shadow: 0 -2px 4px rgba(0,0,0,0.1); /* Adiciona sombra ao footer */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
-
-/*------------------*/
-/* SELESAO DE MENUS */
-/*------------------*/
-
+/* Estilos para a seção de menu */
 .menu-section {
     margin-top: 20px;
     background: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 1200px;
     text-align: center;
@@ -166,6 +150,7 @@ footer {
     margin-bottom: 20px;
 }
 
+/* Navegação do menu */
 .menu-nav {
     display: flex;
     justify-content: center;
@@ -180,7 +165,7 @@ footer {
     border-radius: 5px;
     background-color: #fff;
     margin: 0 10px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -189,25 +174,27 @@ footer {
     color: #fff;
 }
 
+/* Estilos para itens do menu */
 .menu-item {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-    border-bottom: 1px solid #ddd; /* Linha divisória */
+    border-bottom: 1px solid #ddd;
     padding-bottom: 20px;
 }
 
 .menu-item:last-child {
-    border-bottom: none; /* Remove a linha divisória do último item */
+    border-bottom: none;
 }
 
 .menu-item-image {
-    width: 150px; /* Ajuste o tamanho da imagem */
+    width: 150px;
     height: auto;
     margin-right: 20px;
     border-radius: 8px;
 }
 
+/* Detalhes do item do menu */
 .menu-item-details {
     text-align: left;
 }
@@ -229,33 +216,28 @@ footer {
     color: #619778;
 }
 
-
-/* ----------------------
-    Imagens Ampliadas
--------------------------*/
-
-
+/* Estilos para a imagem do menu com efeito de ampliação */
 .menu-item-image-container {
     position: relative;
     cursor: pointer;
-    display: inline-block; /* Garante que o contorno não afete o layout */
-    outline: none; /* Remove o contorno azul padrão */
+    display: inline-block;
+    outline: none;
 }
 
 .menu-item-image {
     transition: transform 0.3s ease;
-    width: 150px; /* Tamanho normal da imagem */
+    width: 150px;
     height: auto;
     border-radius: 8px;
-    display: block; /* Remove o espaço embaixo da imagem */
+    display: block;
 }
 
 .menu-item-image:focus {
-    outline: none; /* Remove o contorno azul ao focar na imagem */
+    outline: none;
 }
 
 .menu-item-image.expanded {
-    transform: scale(2); /* Aumenta a imagem quando ampliada */
+    transform: scale(2);
     z-index: 10;
 }
 
@@ -268,25 +250,14 @@ footer {
     padding: 5px 10px;
     border-radius: 5px;
     font-family: 'Cinzel', serif;
-    transition: opacity 0.3s ease; /* Transição suave para a opacidade */
+    transition: opacity 0.3s ease;
 }
 
 .menu-item-image.expanded + .menu-item-text {
-    opacity: 0; /* Oculta o texto quando a imagem está ampliada */
+    opacity: 0;
 }
 
-
-/* ----------------------
-    Pagina de Localização
--------------------------*/
-
-.mapBox{
-    position: relative;
-    width: px;
-    height: 500px;
-
-}
-
+/* Estilos para a página de localização */
 .location-page {
     font-family: 'Roboto', sans-serif;
     color: #333;
@@ -314,14 +285,14 @@ footer {
     position: relative;
     overflow: hidden;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .contact-info {
     background: #f4f4f4;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     max-width: 800px;
     margin: 20px auto;
     text-align: left;
@@ -356,13 +327,7 @@ iframe {
     height: 100%;
 }
 
-
-/* ----------------------
-    Página de Galeria
--------------------------*/
-
-
-/* Estilos Gerais da Galeria */
+/* Estilos gerais para a página de galeria */
 .gallery-page {
     font-family: 'Roboto', sans-serif;
     color: #333;
@@ -384,6 +349,7 @@ iframe {
     animation: fadeIn 1s ease-in-out;
 }
 
+/* Estilo para o grid da galeria */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -393,11 +359,12 @@ iframe {
     padding: 0 20px;
 }
 
+/* Estilo para os itens da galeria */
 .gallery-item {
     position: relative;
     overflow: hidden;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s, box-shadow 0.3s;
     background-color: #fff;
     transform: scale(1);
@@ -417,11 +384,11 @@ iframe {
 }
 
 .gallery-item:hover {
-    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     transform: scale(1.05);
 }
 
-/* Estilos para Dispositivos Móveis */
+/* Estilos responsivos para dispositivos móveis */
 @media (max-width: 768px) {
     .gallery-header h1 {
         font-size: 2em;
@@ -434,7 +401,7 @@ iframe {
 
     .gallery-item {
         border-radius: 6px;
-        box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
     }
 
     .gallery-item img {
@@ -458,7 +425,7 @@ iframe {
 
     .gallery-item {
         border-radius: 4px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     }
 
     .gallery-item img {
@@ -466,19 +433,19 @@ iframe {
     }
 }
 
+/* Estilo para itens da galeria quando ampliados */
 .gallery-item.zoomed {
     z-index: 10;
     transform: scale(1.2);
-    box-shadow: 0 16px 32px rgba(0,0,0,0.4);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
 }
 
-.caixa-selection{
-    
-    margin-top: 20px;
+/* Estilo específico para caixa de seleção */
+.caixa-selection {
     background: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 1200px;
     text-align: center;
@@ -487,8 +454,3 @@ iframe {
     color: #619778;
     margin-bottom: 20px;
 }
-
-
-
-
-
