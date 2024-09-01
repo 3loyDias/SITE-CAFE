@@ -1,6 +1,10 @@
-DirectoryIndex inicio.html
+RewriteEngine On
 
-RewriteEngine on 
+# Evita que recursos estáticos sejam reescritos
+RewriteCond %{REQUEST_URI} \.(jpg|jpeg|png|gif|css|js)$ [NC]
+RewriteRule ^ - [L]
+
+# Reescreve URLs amigáveis para arquivos .html
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.*)$ $1.html [NC,L]
