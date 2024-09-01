@@ -1,4 +1,4 @@
-DirectoryIndex 
+Directoryinicio 
 
 RewriteEngine on 
 RewriteCond %{REQUEST_FILENAME} !-d
