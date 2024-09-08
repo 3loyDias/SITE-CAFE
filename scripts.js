@@ -46,3 +46,5 @@ if (window.location.pathname === '/index') {
 if (window.location.pathname === '/menu') {
     window.location.replace('/pages/menu.html');
 }
+
+
