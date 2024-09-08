@@ -1,7 +1,23 @@
-document.querySelectorAll('.menu-item-image-container').forEach(container => {
-    container.addEventListener('click', function() {
-        const img = this.querySelector('.menu-item-image');
-        img.classList.toggle('expanded');
+document.addEventListener('DOMContentLoaded', function () {
+    const menuItemContainers = document.querySelectorAll('.menu-item-image-container');
+
+    menuItemContainers.forEach(container => {
+        container.addEventListener('click', function () {
+            const img = this.querySelector('.menu-item-image');
+
+            if (img.classList.contains('expanded')) {
+                img.classList.remove('expanded');
+            } else {
+                // Remove a classe "expanded" de todas as outras imagens
+                menuItemContainers.forEach(cont => {
+                    const otherImg = cont.querySelector('.menu-item-image');
+                    otherImg.classList.remove('expanded');
+                });
+
+                // Adiciona a classe "expanded" à imagem clicada
+                img.classList.add('expanded');
+            }
+        });
     });
 });
 

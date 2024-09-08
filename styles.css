@@ -237,7 +237,7 @@ footer {
 }
 
 .menu-item-image.expanded {
-    transform: scale(2);
+    transform: scale(1.4);
     z-index: 10;
 }
 
@@ -337,6 +337,8 @@ iframe {
 }
 
 .gallery-header {
+    text-align: center;
+    margin: 0 auto; /* Garante que o cabeçalho também esteja centralizado */
     background-color: #619778;
     color: #fff;
     padding: 20px;
@@ -357,6 +359,7 @@ iframe {
     max-width: 1200px;
     margin: 20px auto;
     padding: 0 20px;
+    justify-content: center;
 }
 
 /* Estilo para os itens da galeria */
@@ -452,5 +455,5 @@ iframe {
     font-family: 'Cinzel', serif;
     font-size: 30px;
     color: #619778;
-    margin-bottom: 20px;
+    margin: 0 auto 20px;
 }
