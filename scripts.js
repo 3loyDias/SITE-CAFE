@@ -88,7 +88,45 @@ window.addEventListener('load', function() {
     
     // Anima o footer
     footer.classList.add('show');
-  });
+});
 
 // -------------------//
+// animação dos itens do menu
+// -------------------//
+const menuItems = document.querySelectorAll('.menu-item');
+
+window.addEventListener('scroll', () => {
+    menuItems.forEach(item => {
+        const itemTop = item.getBoundingClientRect().top;
+        if (itemTop < window.innerHeight - 100) {
+            item.classList.add('visible');
+        }
+    });
+});
+
+// -------------------//
+// Scroll suave para âncoras
+// -------------------//
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// -------------------//
+// auto scroll para baixo para carregar a pagina
+// -------------------//
+document.addEventListener('DOMContentLoaded', function () {
+    if (window.location.pathname.includes('menu')) {
+        function autoScroll() {
+            window.scrollBy(0, 1);
+        }
+        
+        setTimeout(autoScroll, 100);
+    }
+});
+
 

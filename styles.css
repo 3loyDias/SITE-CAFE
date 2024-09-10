@@ -55,6 +55,7 @@ header.show {
     padding: 0 20px;
 }
 
+
 /* Estilo para o título no header */
 .text-left .site-title {
     font-family: 'Tilt Warp', sans-serif;
@@ -221,6 +222,17 @@ footer.show {
     margin-bottom: 20px;
     border-bottom: 1px solid #ddd;
     padding-bottom: 20px;
+
+    /* animacao */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* animacao */
+.menu-item.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .menu-item:last-child {
@@ -254,6 +266,11 @@ footer.show {
 .menu-item-price {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.2em;
+    color: #333;
+    
+    transition: color 0.3s ease;
+}
+.menu-item:hover .menu-item-price {
     color: #619778;
 }
 
