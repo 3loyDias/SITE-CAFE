@@ -145,7 +145,7 @@ footer {
 }
 
 .menu-section h1 {
-    font-family: 'Cinzel', serif;
+    font-family: 'Capriola', sans-serif;
     font-size: 2em;
     color: #619778;
     margin-bottom: 20px;
@@ -260,7 +260,7 @@ footer {
 
 /* Estilos para a página de localização */
 .location-page {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Capriola', sans-serif;
     color: #333;
     text-align: center;
     padding: 20px;
@@ -273,7 +273,7 @@ footer {
 }
 
 .location-header h1 {
-    font-family: 'Cinzel', serif;
+    font-family: 'Capriola', sans-serif;
     font-size: 2.5em;
     margin-bottom: 10px;
 }
