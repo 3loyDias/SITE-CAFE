@@ -180,7 +180,9 @@ footer.show {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 1200px;
-    text-align: center;
+    text-align: left;
+    box-sizing: border-box;
+    margin: 0 auto;
 }
 
 .menu-section h1 {
@@ -218,9 +220,10 @@ footer.show {
 .menu-item {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     margin-bottom: 20px;
-    border-bottom: 1px solid #ddd;
     padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
 }
 
 .menu-item:last-child {
@@ -230,7 +233,7 @@ footer.show {
 .menu-item-image {
     width: 150px;
     height: auto;
-    margin-right: 20px;
+    margin-left: -11px;
     border-radius: 8px;
 }
 
@@ -260,9 +263,12 @@ footer.show {
 /* Estilos para a imagem do menu com efeito de ampliação */
 .menu-item-image-container {
     position: relative;
-    cursor: pointer;
-    display: inline-block;
-    outline: none;
+    flex-shrink: 0;
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-right: 20px;
 
     /* animacao menu */
     overflow: hidden;
@@ -300,6 +306,8 @@ footer.show {
 .menu-item-image.expanded+.menu-item-text {
     opacity: 0;
 }
+
+
 
 /* Estilos para a página de localização */
 .location-page {
