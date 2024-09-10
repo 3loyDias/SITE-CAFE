@@ -1,3 +1,6 @@
+// -------------------//
+// animacao das imagens do menu
+// -------------------//
 document.addEventListener('DOMContentLoaded', function () {
     const menuItemContainers = document.querySelectorAll('.menu-item-image-container');
 
@@ -21,9 +24,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-
-// galeria
-
+// -------------------//
+// animação das imagens da galeria
+// -------------------//
 document.addEventListener('DOMContentLoaded', function () {
     const galleryItems = document.querySelectorAll('.gallery-item');
 
@@ -39,12 +42,53 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-if (window.location.pathname === '/index') {
-    window.location.replace('/index.html');
-}
+// -------------------//
+// animação do header
+// -------------------//
+window.addEventListener('load', function() {
+    const header = document.querySelector('header');
+    header.classList.add('show');
+});
 
-if (window.location.pathname === '/menu') {
-    window.location.replace('/pages/menu.html');
-}
+// -------------------//
+// animação dos botões
+// -------------------//
+window.addEventListener('load', function() {
+    const header = document.querySelector('header');
+    const buttons = document.querySelectorAll('.nav-link');
+    
+    // Anima o header
+    header.classList.add('show');
+    
+    // Anima os botões com um delay em cascata
+    buttons.forEach((button, index) => {
+      setTimeout(() => {
+        button.classList.add('show');
+      }, index * 200); // Atraso de 200ms entre cada botão
+    });
+});
 
+// -------------------//
+// animação do footer
+// -------------------//
+window.addEventListener('load', function() {
+    const header = document.querySelector('header');
+    const buttons = document.querySelectorAll('.nav-link');
+    const footer = document.querySelector('footer');
+    
+    // Anima o header
+    header.classList.add('show');
+    
+    // Anima os botões com um delay em cascata
+    buttons.forEach((button, index) => {
+      setTimeout(() => {
+        button.classList.add('show');
+      }, index * 200); // Atraso de 200ms entre cada botão
+    });
+    
+    // Anima o footer
+    footer.classList.add('show');
+  });
+
+// -------------------//
 

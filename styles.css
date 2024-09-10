@@ -6,13 +6,15 @@
 }
 
 /* Estilos gerais para html e body */
-html, body {
+html,
+body {
     height: 100%;
     font-family: 'Roboto', sans-serif;
     background-color: #f4f4f4;
     color: #333;
     display: flex;
     flex-direction: column;
+    scroll-behavior: smooth;
 }
 
 /* Wrapper para garantir o layout flexível */
@@ -31,6 +33,16 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s;
 
+    /* animacao do header */
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* animacao do header */
+header.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Conteúdo do header com alinhamento flexível */
@@ -92,6 +104,7 @@ main {
         opacity: 0;
         transform: translateY(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -115,6 +128,17 @@ main {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s, color 0.3s, transform 0.3s;
+
+    /* animacao dos butoes */
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* animacao dos butoes */
+.nav-link.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .nav-link:hover {
@@ -130,6 +154,16 @@ footer {
     text-align: center;
     padding: 1em 0;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    /* animacao do footer */
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* animacao do footer */
+footer.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Estilos para a seção de menu */
@@ -213,7 +247,7 @@ footer {
 }
 
 .menu-item-price {
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.2em;
     color: #619778;
 }
@@ -255,7 +289,7 @@ footer {
     transition: opacity 0.3s ease;
 }
 
-.menu-item-image.expanded + .menu-item-text {
+.menu-item-image.expanded+.menu-item-text {
     opacity: 0;
 }
 
@@ -312,7 +346,9 @@ footer {
     margin-bottom: 10px;
 }
 
-.contact-info .address, .contact-info .phone, .contact-info .email {
+.contact-info .address,
+.contact-info .phone,
+.contact-info .email {
     margin-bottom: 10px;
 }
 
@@ -340,7 +376,8 @@ iframe {
 
 .gallery-header {
     text-align: center;
-    margin: 0 auto; /* Garante que o cabeçalho também esteja centralizado */
+    margin: 0 auto;
+    /* Garante que o cabeçalho também esteja centralizado */
     background-color: #619778;
     color: #fff;
     padding: 20px;
@@ -459,4 +496,3 @@ iframe {
     color: #619778;
     margin: 0 auto 20px;
 }
-
