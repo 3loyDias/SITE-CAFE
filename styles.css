@@ -17,6 +17,14 @@ body {
     scroll-behavior: smooth;
 }
 
+.index-background {
+    background-image: url('./images/bg.jpg'); /* Substitua pelo caminho da sua imagem */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
 /* Wrapper para garantir o layout flexível */
 .wrapper {
     flex: 1;
